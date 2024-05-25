@@ -1,0 +1,444 @@
+/* Fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');       
+
+/* Estilos Generales */
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #000000;
+  color: #ece6e6;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top:0;
+  left: 0;
+  z-index: 1000;
+}
+
+h1 {
+  color: #cbe00e;
+  font-size: 3rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  color: #e5ff00;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;    
+  max-height: 0.3s aese;
+  overflow: hidden;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ece6e6;
+  text-decoration: none;
+} 
+
+/* Menu Hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 50px;
+} 
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    max-height: 0;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 100%;
+  
+  
+  }
+
+  nav ul.active {
+    max-height: 300px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+main {
+  padding: 20px;
+  flex: 1;
+  padding-top: 60px;
+}
+
+.centrado {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+}
+/* Estilos cards */
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.card:hover{
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.card-content p {
+  color: #666;
+  font-size: 0.9em;
+}
+
+footer {
+  background-color: #000000;
+  color: #ece6e6;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Seccion Banner */
+#banner {
+  background-image: url('../img/Banner-reloj.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 325px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ece6e6;
+  margin-top: 30px;
+}
+  
+
+.banner {
+    font-size: 3rem;
+ }
+  
+  #banner h4 {
+    text-align: left;
+    font-family: "Work Sans" ,sans-serif;
+    font-size: 4rem;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  #icono {
+    width: 350px; 
+    height: 250px;
+    margin-bottom: 130px; 
+    margin-right: 170px;
+  }
+  
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+
+    #banner h4 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #banner h4 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  .poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+
+.work-sans-<uniquifier> {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* Estilos Contacto */
+#contact {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 10px rgba(123, 223, 41, 0.1); 
+}
+
+#contact-body {
+  background-image: url('../img/fondo-contact.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+ #contact h1{
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: 0 5px 5px rgba(12, 14, 1, 0.1); 
+}
+
+  #contactForm {
+   display: block;
+   flex-wrap: column;
+   margin-right: 50px;
+}
+  #contactForm div {
+    margin-bottom: 5px;
+}
+
+#contactForm label {
+  display: flex;
+  margin-bottom: 2px;
+  color: #cbe00e;
+}
+
+#contactForm select,
+#contactForm input,
+#contactForm textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddddddb9;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+}
+
+#contactForm button {
+  padding: 5px;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: medium;
+  height: 40px;
+  width: 80px;
+  margin-left: 180px;
+  
+}
+#contactForm button:hover {
+  background-color: #5f5f5a;
+}
+
+#terminos { 
+  display: flex;
+  align-items: center;
+}
+.terms {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* Responsive form */
+@media (max-width: 768px) {
+  #contact {
+    max-width: 80%;
+  }
+
+  #contact h1 {
+    font-size: 1.8rem;
+  }
+
+  #contactForm {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact {
+    max-width: 95%;
+  }
+
+  #contact h1 {
+    font-size: 1.5rem;
+  }
+}
+/* Estilos Nosotros */
+#about {
+  max-width: 800px;
+}
+.nosotros { 
+  max-width: 700px;
+  border: 10px; 
+  box-shadow: 0 4px 6px rgba(102, 101, 101, 0);
+  margin: 0 auto;
+  text-align: left;
+  margin-top: -40px;
+}
+
+#about h1 {
+  color: #cbe00e;
+  font-size: 3rem;
+  position: relative;
+  top: -10px; 
+}
+/* Estilos Servicio */
+#services{
+  max-width: 800px;
+ 
+}
+.servicio{
+  max-width: 700px;
+  border: 5px;
+  box-shadow: 0 4px 6px rgba(102, 101, 101, 0);
+  margin: 0 auto;
+  margin-top: -55px;
+}
+#services h1{
+  color: #cbe00e;
+  font-size: 3rem;
+  position: relative;
+  top: -30px
+}
+#form {
+  border:1px solid #cbe00e;
+  width:450px;
+  margin:auto;
+  margin-left: 400px;
+  margin-top: -70px;
+}
+#form legend{
+  font-weight:bold;
+  font-size:20px;
+}
+#form ul{
+  list-style:none;
+}
+#form ul li{
+  padding-bottom:5px;
+}
+#form ul li label{
+  width:120px;
+  float:left;
+  text-align:left;
+}
+#form input[type=text] {
+  border:1px solid #CCCCCC;
+}
+#form input.btn {
+  padding:9px;
+  color:#FFFFFF;
+  background-color:#737c25;;
+  border:1px solid #000000;
+  border-radius: 5px;
+
+}
+
+
