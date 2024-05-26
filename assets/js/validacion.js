@@ -30,57 +30,56 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!validateEmail(email)) {
       isValid = false;
       messages.push('Ingrese un correo electrónico válido en el formato nombre@ejemplo.com');
-      // Dentro de la función de validación después de encontrar que el campo no es válido
       const errorMessage = document.createElement('p');
       errorMessage.textContent = 'Por favor, ingresa una dirección de correo electrónico válida.';
       errorMessage.style.color = 'red';
       inputField.parentNode.appendChild(errorMessage);
+    }
 
+    if (password.length < 8) {
+      isValid = false;
+      messages.push('La contraseña debe tener al menos 8 caracteres.');
+    }
 
-      if (password.length < 8) {
-        isValid = false;
-        messages.push('La contraseña debe tener al menos 8 caracteres.');
-      }
+    if (!validatePhoneNumber(phone)) {
+      isValid = false;
+      messages.push('Por favor, ingresa un número de teléfono válido.');
+    }
 
-      if (!validatePhoneNumber(phone)) {
-        isValid = false;
-        messages.push('Por favor, ingresa un número de teléfono válido.');
-      }
+    if (pais === '') {
+      isValid = false;
+      messages.push('Debe seleccionar un país.');
+    }
 
-      if (pais === '') {
-        isValid = false;
-        messages.push('Debe seleccionar un país.');
-      }
+    if (service === '') {
+      isValid = false;
+      messages.push('Debe seleccionar un servicio.');
+    }
 
-      if (service === '') {
-        isValid = false;
-        messages.push('Debe seleccionar un servicio.');
-      }
+    if (message === '') {
+      isValid = false;
+      messages.push('El mensaje es requerido.');
+    }
 
-      if (message === '') {
-        isValid = false;
-        messages.push('El mensaje es requerido.');
-      }
+    if (!terms) {
+      isValid = false;
+      messages.push('Debe aceptar los términos y condiciones.');
+    }
 
-      if (!terms) {
-        isValid = false;
-        messages.push('Debe aceptar los términos y condiciones.');
-      }
-
-      if (isValid) {
-        form.submit();
-      } else {
-        alert(messages.join('\n'));
-      }
-    };
+    if (isValid) {
+      form.submit();
+    } else {
+      alert(messages.join('\n'));
+    }
+  });
 
   function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   }
-});
 
-function validatePhoneNumber(phoneNumber) {
-  const phoneRegex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
-  return phoneRegex.test(phoneNumber);
+  function validatePhoneNumber(phoneNumber) {
+    const phoneRegex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+    return phoneRegex.test(phoneNumber);
+  }
 });
