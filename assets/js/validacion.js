@@ -30,10 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!validateEmail(email)) {
       isValid = false;
       messages.push('Ingrese un correo electrónico válido en el formato nombre@ejemplo.com');
-      const errorMessage = document.createElement('p');
-      errorMessage.textContent = 'Por favor, ingresa una dirección de correo electrónico válida.';
-      errorMessage.style.color = 'red';
-      inputField.parentNode.appendChild(errorMessage);
     }
 
     if (password.length < 8) {
