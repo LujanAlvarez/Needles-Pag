@@ -101,8 +101,9 @@ nav ul li a {
 main {
   padding: 20px;
   flex: 1;
-  padding-top: 60px;
-  margin-top: -30px
+  padding-bottom: -30px;
+  margin-top: 30px;
+  margin-bottom: 80px;
 }
 
 .centrado {
@@ -161,7 +162,8 @@ footer {
   margin-top: auto;
   width: 100%;
   bottom: 0;
-  position: fixed;
+  margin-top: 20px;
+  position: relative;
   height: 50px;
 }
 @media (max-width: 768px) {
