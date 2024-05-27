@@ -33,7 +33,7 @@ h1 {
   color: #cbe00e;
   font-size: 3rem;
 }
-
+/*estilo nav*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -102,7 +102,7 @@ main {
   padding: 20px;
   flex: 1;
   padding-top: 60px;
-  margin-bottom: 100px;
+  margin-top: -30px
 }
 
 .centrado {
